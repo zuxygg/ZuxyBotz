@@ -73,7 +73,7 @@ let imaged = await new Canvas.Welcome()
   .setBackground("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF7c3n7snGnpzS676fXaU2yxSjGsFNrCURXw&usqp=CAU")
   .toAttachment();
  buff = await imaged.toBuffer()
- teks = `@${mem.split("@")[0]} Bergabung dalam Group ${groupM.subject}`
+ teks = `@${mem.split("@")[0]} Telah Bergabung dalam Group ${groupM.subject}\n\nSemoga Betah Dan Jangan Lupa Intro Yah\n\n\n_*𝙉𝘼𝙈𝘼 :*_\n_*𝙐𝙈𝙐𝙍 :*_\n_*𝘼𝙎𝘼𝙇 :*_`
  conn.sendButImg(jid, buff, teks, userbot.packname, 'Selamat datang', 'welcome', false, { contextInfo: {"mentionedJid": conn.parseMention(teks)}})
     }
     
