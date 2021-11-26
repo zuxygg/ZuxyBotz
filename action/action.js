@@ -46,7 +46,7 @@ let image = await new Canvas.Goodbye()
   .setBackground("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaBCkFVUY0nJxj1DPqtvAwrf7qfvj6e-Rv-A&usqp=CAU")
   .toAttachment();
  buff = await image.toBuffer()
-teks = `@${mem.split("@")[0]} Keluar Dari Group ${groupM.subject}`
+teks = `@${mem.split("@")[0]} Telah Keluar Dari Group ${groupM.subject}`
  conn.sendButImg(jid, buff, teks, userbot.packname, 'Selamat tinggal', 'say goodbye', false, { contextInfo: {"mentionedJid": conn.parseMention(teks)}})
     }
     
