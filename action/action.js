@@ -47,7 +47,7 @@ let image = await new Canvas.Goodbye()
   .toAttachment();
  buff = await image.toBuffer()
 teks = `@${mem.split("@")[0]} Telah Keluar Dari Group ${groupM.subject}`
- conn.sendButImg(jid, buff, teks, userbot.packname, 'Selamat tinggal', 'say goodbye', false, { contextInfo: {"mentionedJid": conn.parseMention(teks)}})
+ conn.sendButtonLoc(jid, buff, teks, userbot.packname, 'Selamat tinggal', 'say goodbye', false, { contextInfo: {"mentionedJid": conn.parseMention(teks)}})
     }
     
  break
@@ -73,10 +73,9 @@ let imaged = await new Canvas.Welcome()
   .setBackground("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF7c3n7snGnpzS676fXaU2yxSjGsFNrCURXw&usqp=CAU")
   .toAttachment();
  buff = await imaged.toBuffer()
- teks = `@${mem.split("@")[0]} Telah Bergabung dalam Group ${groupM.subject}\n\n*_𝙎𝙚𝙢𝙤𝙜𝙖 𝘽𝙚𝙩𝙖𝙝 𝘿𝙖𝙣 𝙅𝙖𝙣𝙜𝙖𝙣 𝙇𝙪𝙥𝙖 𝙄𝙣𝙩𝙧𝙤 𝙔𝙖𝙝_*\n\n_*𝙉𝘼𝙈𝘼 :*_\n_*𝙐𝙈𝙐𝙍 :*_\n_*𝘼𝙎𝘼𝙇 :*_`
- conn.sendButImg(jid, buff, teks, userbot.packname, 'Selamat datang', 'welcome', false, { contextInfo: {"mentionedJid": conn.parseMention(teks)}})
+ teks = `Assalamualaikum Warahmatulahi Wabarakatu, Ahlan Wa Sahlan Shalihah Yg Baru Bergabung @${mem.split("@")[0]}\n\nSeMoGa Betah Dalam Grup ${groupM.subject}`
+ conn.sendButtonLoc(jid, buff, teks, userbot.packname, 'Selamat datang', 'welcome', false, { contextInfo: {"mentionedJid": conn.parseMention(teks)}})
     }
-    
  break
 }
 }
