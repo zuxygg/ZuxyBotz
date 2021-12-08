@@ -1,11 +1,11 @@
 module.exports = {
-name: ["start"],
+name: ["start"], 
 type: ['anonymous chat'],
 description: "anonymous chat seperti telegram",
 utilisation: global.userbot.prefix+ "start",
 
 async execute(m) {
-
+//snsn
 if (Object.values(this.anonymous).find(room => room.check(m.sender))) {
                 await this.sendButton(m.chat, 'Kamu masih berada di dalam anonymous chat, menunggu partner...\n\nKetik ${userbot.prefix}leave untuk berhenti\natau menekan button dibawah ini', userbot.author, 'LEAVE', `${userbot.prefix}leave`, m)
                 throw false
